@@ -1,3 +1,12 @@
+(function() {
+    const token = localStorage.getItem('authToken');
+    if (token) {
+        // Jika ada token (user sudah login), dan mereka mencoba mengakses halaman login/register,
+        // langsung arahkan ke halaman home.
+        window.location.href = 'home.html';
+    }
+})();
+
 const signUpButton = document.getElementById("signUpForm");
 const signInButton = document.getElementById("signInForm");
 const container = document.getElementById("container");
