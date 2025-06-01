@@ -13,6 +13,10 @@ body {
   overflow-x: hidden;
 }
 
+.home-section{
+  min-height: 100vh;
+}
+
 /* === SLIDER SECTION === */
 .slider-wrapper {
   max-width: 900px;

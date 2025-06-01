@@ -29,6 +29,7 @@ body {
   background-size: auto;
   background-repeat: no-repeat;
   background-position: center;
+  min-height: 100vh;
 }
 
 .show-header {
