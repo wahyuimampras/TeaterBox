@@ -39,7 +39,7 @@ module.exports = async (req, res) => {
             // 2. Kirim respon yang LENGKAP dengan status, pesan, DAN TOKEN
             res.status(200).json({ 
                 status: "success", 
-                message: "Login success! You will be directed...",
+                message: "Login success! You will be directed to Home...",
                 token: token 
             });
             // ======================================================
