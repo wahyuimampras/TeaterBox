@@ -82,3 +82,8 @@ paymentMethod.addEventListener("change", () => updateTotal());
 
 // Initial total calculation
 updateTotal();
+
+ payNowButton.addEventListener("click", () => {
+      alert(`Simulating payment...\nItem: ${currentItemTitle} (${currentPurchaseType})\nTotal: ${totalPriceDisplay.textContent}\nMethod: ${paymentMethodSelect.value}\n\nThank you! You will be redirected.`);
+      window.location.href = "index.html"; 
+    });
