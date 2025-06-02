@@ -85,6 +85,19 @@ createSeats(leftContainer, 'left', seatLayout.left);
 createSeats(centerContainer, 'center', seatLayout.center);
 createSeats(rightContainer, 'right', seatLayout.right);
 
+checkoutBtn.addEventListener('click', () => {
+  const selectedSeats = document.querySelectorAll('.dot.selected');
+  const seatInfo = [];
+
+  selectedSeats.forEach(seat => {
+    seatInfo.push({
+      class: seat.dataset.class,
+      price: parseInt(seat.dataset.price)
+    });
+  });
+
+  localStorage.setItem('selectedSeats', JSON.stringify(seatInfo));
+});
 // Load navbar & footer
 async function loadHTML(id, file, callback) {
   const res = await fetch(`masterComponent/${file}`);
